@@ -1,22 +1,27 @@
-#include <stdio.h>
-
-void decimalToBinary(int n) {
-    if (n > 1) {
-        decimalToBinary(n / 2);  
-    }
-    printf("%d", n % 2);  
+#include<stdio.h>
+int fac(int n){
+    if (n == 0 || n == 1)
+        return 1;  
+  return n*fac(n-1);
 }
 
-int main() {
-    int n;
-    printf("Enter the number: ");
-    scanf("%d", &n);
-    
-    if (n == 0) {
-        printf("0");
-    } else {
-        decimalToBinary(n);
-    }
+int nCr( int n ,int r){
+   return fac(n)/(fac(r)*fac(n-r));
 
-    return 0;
+}
+
+
+
+int main(){
+    int n , r ;
+    scanf("%d",&n);
+     scanf("%d",&r);
+ int f = fac(n);
+ int m = nCr(n,r);
+ printf("%d",m);
+ printf("%d",f);
+return 0;
+
+
+
 }
