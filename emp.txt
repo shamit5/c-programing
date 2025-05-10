@@ -1,0 +1,3 @@
+Name: Srishti
+Age: 20
+Salary: 200000.00
